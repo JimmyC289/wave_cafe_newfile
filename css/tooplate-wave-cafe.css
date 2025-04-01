@@ -14,7 +14,7 @@ body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 18px;
     overflow-x: hidden;
-    background-color: #1E5050;
+    background-color: #099;
 }
 
 ul {
@@ -26,10 +26,12 @@ nav > ul > li { list-style: none; }
 
 a { 
 	color: #3CF;
-    text-decoration: none;
+    text-decoration: underline;
     transition: all 0.3s ease; 
 }
-
+a:hover {
+    color: #0056b3; /* 添加懸停效果 */
+}
 p { 
     line-height: 1.8; 
     margin-top: 0;
@@ -42,7 +44,11 @@ h2 { margin-top: 0; }
     right: 0;
     bottom: 0;    
     z-index: -1000;
+    width: 100%;  /* 加入這一行 */
+    height: 100%;  /* 加入這一行 */
+    object-fit: cover; /* 保持背景影片比例並填滿容器 */
 }
+
 
 .tm-video-wrapper { position: relative; }
 
@@ -105,7 +111,7 @@ h2 { margin-top: 0; }
     min-width: 240px;
     height: 100px;
     background-color: white;
-    color: #099;
+    color: #152c2c;
     display: flex;
     text-decoration: none;
     align-items: center;      
@@ -114,7 +120,7 @@ h2 { margin-top: 0; }
 
 .tm-page-link:hover,
 .tm-page-link.active {
-    background-color: #099;
+    background-color: #152c2c;
     color: white;
 }
 
@@ -256,6 +262,7 @@ h2 { margin-top: 0; }
     width: 100%;
     padding: 15px;
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-display: swap;
     font-size: 1rem;
     line-height: 1.5;
     color: #fff;
